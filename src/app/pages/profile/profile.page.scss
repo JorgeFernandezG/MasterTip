@@ -1,0 +1,28 @@
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--ion-color-primary);
+  }
+  
+  .profile-picture-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  .profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-username {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--ion-color-light);
+    text-align: center;
+  }
+  

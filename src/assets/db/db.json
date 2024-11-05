@@ -1,0 +1,42 @@
+{
+    "database": "apuestas.db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables": [
+      {
+        "name": "apuestas",
+        "schema": [
+          {
+            "column": "id",
+            "value": "INTEGER PRIMARY KEY AUTOINCREMENT"
+          },
+          {
+            "column": "titulo",
+            "value": "TEXT NOT NULL"
+          },
+          {
+            "column": "descripcion",
+            "value": "TEXT NOT NULL"
+          },
+          {
+            "column": "stake",
+            "value": "TEXT NOT NULL"
+          }
+        ]
+      },
+      {
+        "name": "users",
+        "schema": [
+          { "column": "id", "value": "INTEGER PRIMARY KEY AUTOINCREMENT" },
+          { "column": "username", "value": "TEXT NOT NULL UNIQUE" },
+          { "column": "password", "value": "TEXT NOT NULL" },
+          { "column": "firstName", "value": "TEXT" },
+          { "column": "lastName", "value": "TEXT" },
+          { "column": "birthDate", "value": "TEXT" },
+          { "column": "profilePicture", "value": "TEXT" }
+        ]
+      }
+    ]
+  }
+  

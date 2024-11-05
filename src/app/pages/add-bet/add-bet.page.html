@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-title size="large">Nueva Apuesta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form (ngSubmit)="create()" class="bet-form">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Título</ion-label>
+        <ion-input [(ngModel)]="apuesta.titulo" name="titulo" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input [(ngModel)]="apuesta.descripcion" name="descripcion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Stake</ion-label>
+        <ion-input [(ngModel)]="apuesta.stake" name="stake" required></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="button-group">
+      <ion-button type="submit" expand="block" color="primary">Subir</ion-button>
+    </div>
+  </form>
+</ion-content>

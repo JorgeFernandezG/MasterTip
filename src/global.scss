@@ -1,0 +1,82 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+
+:root {
+    --color-primary: #9E47F7;
+    --color-accent: #FDD835;
+    --color-light: #FFFFFF;
+    --color-gray: #E5E7EB;
+  }
+
+
+  
+  ion-header, ion-toolbar {
+    --background: var(--color-primary);
+    --color: var(--color-light);
+  }
+  
+  .bet-form {
+    padding: 16px;
+  }
+  
+  .bet-form ion-item {
+    --background: var(--color-light);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bet-form ion-label {
+    color: var(--color-primary);
+  }
+  
+  .bet-form ion-input {
+    color: var(--color-primary);
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  ion-button[color="primary"] {
+    --background: var(--color-primary);
+    --background-activated: #7c36d4;
+    --background-focused: #7c36d4;
+    --background-hover: #7c36d4;
+  }
+  
+  ion-button[color="medium"] {
+    --background: var(--color-gray);
+    --background-activated: #d4d6db;
+    --background-focused: #d4d6db;
+    --background-hover: #d4d6db;
+  }
+  

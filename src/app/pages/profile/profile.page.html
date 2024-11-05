@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="profile-header">
+      <div class="profile-picture-container">
+        <img *ngIf="profile.profilePicture; else defaultAvatar" [src]="profile.profilePicture" alt="Profile Picture" class="profile-picture">
+        <ng-template #defaultAvatar>
+          <ion-avatar class="profile-picture">
+            <img src="assets/avatar-default.jpg" alt="Default Avatar">
+          </ion-avatar>
+        </ng-template>
+      </div>
+      <div class="profile-username">{{ profile.username }}</div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="updateProfile()">
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input [(ngModel)]="profile.firstName" name="firstName" [readonly]="!isEditing"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellido</ion-label>
+      <ion-input [(ngModel)]="profile.lastName" name="lastName" [readonly]="!isEditing"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Fecha de nacimiento</ion-label>
+      <ion-input [(ngModel)]="profile.birthDate"  name="birthDate" readonly *ngIf="!isEditing"></ion-input>
+
+      <ion-datetime [(ngModel)]="profile.birthDate" presentation="date"  name="birthDate" *ngIf="isEditing"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked"  *ngIf="isEditing">Foto de perfil</ion-label>
+      <input type="file" (change)="onFileSelected($event)" *ngIf="isEditing">
+    </ion-item>
+    <ion-button expand="full" type="button" (click)="toggleEdit()">{{ isEditing ? 'Cancelar' : 'Editar' }}</ion-button>
+    <ion-button expand="full" type="submit" *ngIf="isEditing">Aplicar cambios</ion-button>
+  </form>
+</ion-content>
+  

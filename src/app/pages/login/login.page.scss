@@ -1,0 +1,15 @@
+:root {
+    --color-primary: #9E47F7;
+    --color-accent: #FDD835;
+    --color-light: #FFFFFF;
+    --color-gray: #E5E7EB;
+  }
+
+
+  ion-button {
+    --background: var(--color-accent);
+    --background-hover: var(--color-primary);
+    --color: var(--color-light);
+    width: 100%;
+    margin-top: 16px;
+  }
